@@ -95,28 +95,28 @@ def dump(files: iter, output_dir: str, unique: bool, update_all: bool):
     """
     out_stream = {
         Citation.__tablename__:
-        open(join(output_dir, "citations.tab"), "wt"),
+        open(join(output_dir, "citations.tab"), encoding="utf-8", mode="wt"),
         Abstract.__tablename__:
-        open(join(output_dir, "abstracts.tab"), "wt"),
+        open(join(output_dir, "abstracts.tab"), encoding="utf-8", mode="wt"),
         Section.__tablename__:
-        open(join(output_dir, "sections.tab"), "wt"),
+        open(join(output_dir, "sections.tab"), encoding="utf-8", mode="wt"),
         Descriptor.__tablename__:
-        open(join(output_dir, "descriptors.tab"), "wt"),
+        open(join(output_dir, "descriptors.tab"), encoding="utf-8", mode="wt"),
         Qualifier.__tablename__:
-        open(join(output_dir, "qualifiers.tab"), "wt"),
+        open(join(output_dir, "qualifiers.tab"), encoding="utf-8", mode="wt"),
         Author.__tablename__:
-        open(join(output_dir, "authors.tab"), "wt"),
+        open(join(output_dir, "authors.tab"), encoding="utf-8", mode="wt"),
         Identifier.__tablename__:
-        open(join(output_dir, "identifiers.tab"), "wt"),
+        open(join(output_dir, "identifiers.tab"), encoding="utf-8", mode="wt"),
         Database.__tablename__:
-        open(join(output_dir, "databases.tab"), "wt"),
+        open(join(output_dir, "databases.tab"), encoding="utf-8", mode="wt"),
         PublicationType.__tablename__:
-        open(join(output_dir, "publication_types.tab"), "wt"),
+        open(join(output_dir, "publication_types.tab"), encoding="utf-8", mode="wt"),
         Chemical.__tablename__:
-        open(join(output_dir, "chemicals.tab"), "wt"),
+        open(join(output_dir, "chemicals.tab"), encoding="utf-8", mode="wt"),
         Keyword.__tablename__:
-        open(join(output_dir, "keywords.tab"), "wt"),
-        'delete': open(join(output_dir, "delete.txt"), "wt"),
+        open(join(output_dir, "keywords.tab"), encoding="utf-8", mode="wt"),
+        'delete': open(join(output_dir, "delete.txt"), encoding="utf-8", mode="wt"),
     }
     count = 0
     parser = MedlineXMLParser(unique)
